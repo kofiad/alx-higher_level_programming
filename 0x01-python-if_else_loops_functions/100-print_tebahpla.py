@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-def print_reverse_alphabet():
-    lowStart = ord('z')
-    upStart = ord('Y')
-    for asciiValue in range(lowStart, ord('a') - 1, -1):
-        print(chr(asciiValue), end='')
-        if asciiValue > ord('a'):
-            print(chr(asciiValue - (lowStart - upStart)), end='')
+i = 0
+for c in range(ord('z'), ord('a') - 1, -1):
+    print("{}".format(chr(c - i)), end="")
+    i = 32 if i == 0 else 0
