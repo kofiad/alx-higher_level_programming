@@ -14,7 +14,7 @@ class Square:
         Args:
             size (_private_): _size of the square_
         """
-        if not size.isdigit():
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
