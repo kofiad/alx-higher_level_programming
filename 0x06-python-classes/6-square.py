@@ -7,7 +7,7 @@ class Square:
     Private instance attribute: size
     Instantiation with size
     """
-    def __init__(self, size=0, position=0):
+    def __init__(self, size=0, position=(0, 0)):
         """Constructor method for class
         Initializes "size" and "position" attributes
 
@@ -63,8 +63,7 @@ class Square:
         Raises:
             TypeError: if value is not a tuple of 2 positive integers
         """
-        if not isinstance(value, tuple) or len(value) != 2 or
-        not all(isinstance(i, int) and i >= 0 for i in value):
+        if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(i, int) and i >= 0 for i in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
