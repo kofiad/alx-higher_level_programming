@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a Python data structure function"""
+"""Defines a JSON-to-string function"""
 import json
 
 
