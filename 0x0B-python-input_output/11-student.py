@@ -34,5 +34,4 @@ class Student:
             json (dictionary): values to replace attributes with
         """
         for key, value in json.items():
-            if hasattr(self, key):
                 setattr(key, value)
