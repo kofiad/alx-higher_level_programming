@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Defines a load_from_json_file function"""
 import json
+"""Defines a load_from_json_file function"""
 
 
 def load_from_json_file(filename):

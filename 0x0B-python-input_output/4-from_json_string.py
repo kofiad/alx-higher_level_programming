@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Defines a JSON-to-string function"""
 import json
+"""Defines a JSON-to-string function"""
 
 
 def from_json_string(my_str):
@@ -10,6 +10,6 @@ def from_json_string(my_str):
         my_str (string): object
 
     Returns:
-         Python data structure: converted JSON string to a Python data structure
+         Python data structure: JSON string to a Python data structure
     """
     return json.loads(my_str)
