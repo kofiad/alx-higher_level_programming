@@ -92,8 +92,8 @@ class Rectangle(Base):
         """that prints in stdout the Rectangle instance 
         with the character #
         """
-        for _ in range(self.__height):
-            print("#" * self.__width)
+       # for _ in range(self.__height):
+            #print("#" * self.__width)
         for _ in range(self.__y):
             print()
         for _ in range(self.__x):
@@ -103,4 +103,9 @@ class Rectangle(Base):
         note = "[Rectangle] ({}) {}/{} - {}/{}"
         return note.format(self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):        
+    def update(self, *args, **kwargs):
+        """ assigns a key/value argument to attributes
+        """
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        for attribute, value in zip(attributes, args):
+            setattr(self, attribute, value)
