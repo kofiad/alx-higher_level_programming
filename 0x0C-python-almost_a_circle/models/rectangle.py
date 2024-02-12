@@ -121,4 +121,4 @@ class Rectangle(Base):
         Returns:
             dictionary : rectangle representation 
         """
-        return dir(self)
+        return self.__dict__
