@@ -39,9 +39,12 @@ class Base:
         Args:
             list_objs (list): list of instances who inherits of Base
         """
-        list_dicts = [obj.to_dictionary() for obj in list_objs] if list_objs else []
-        with open(cls.__name__ + '.json', 'w') as file:
-            file.write(cls.to_json_string(list_dicts))
+        with open(cls.__name__ + ".json", 'w') as file:
+            if list_objs is None:
+                file.write("[]")
+            else:
+                list_dicts = [obj.to_dictionary() for obj in list_objs]
+                file.write(Base.to_json_string(list_dicts))
 
     @staticmethod
     def from_json_string(json_string):
@@ -81,6 +84,6 @@ class Base:
         try:
             with open(filename, "r") as jsonfile:
                 list_dicts = Base.from_json_string(jsonfile.read())
-                return[cls.create(**d) for d in list_dicts]
+                return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
