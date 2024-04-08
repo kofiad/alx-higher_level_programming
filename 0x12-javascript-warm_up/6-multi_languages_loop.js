@@ -1,4 +1,4 @@
 #!/usr/bin/node
-for (const sentences of ['C is fun', 'Python is cool', 'Javascript is amazing']) {
-  console.log(sentences);
+for (const sentence of ['C is fun', 'Python is cool', 'JavaScript is amazing']) {
+  console.log(sentence);
 }
