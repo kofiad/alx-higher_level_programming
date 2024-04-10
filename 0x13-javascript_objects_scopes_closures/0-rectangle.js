@@ -3,4 +3,5 @@
  * empty class Rectangle that defines a rectangle
  */
 class Rectangle {}
-export default Rectangle;
+
+module.exports = Rectangle;
