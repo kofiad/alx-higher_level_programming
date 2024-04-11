@@ -8,10 +8,10 @@ const Square0 = require('./5-square');
 class Square extends Square0 {
   charPrint (c) {
     if (typeof c === 'undefined') {
-        c = 'X';
+      c = 'X';
     }
     for (let i = 0; i < this.height; i++) {
-        console.log(c.repeat(this.width));
+      console.log(c.repeat(this.width));
     }
   }
 }
